@@ -1,0 +1,26 @@
+hello world this is has been great summer 
+am writing this file to show how read system call can be used effeciently
+keep on read n bytes until return value is n
+once it is less than n bytes, change your len to current ret as we need to read less words
+if return value is -1, which means there is some error, so we throw error and get out of the loop
+Thank you!
+helloworld old fd
+helloworld old fd
+helloworld old fd
+helloworld new fd
+helloworld old fd
+helloworld new fd
+helloworld old fd
+helloworld new fd
+helloworld old fd
+helloworld new fd
+helloworld old fd
+helloworld new fd
+helloworld old fd
+helloworld new fd
+helloworld old fd
+helloworld new fd
+helloworld old fd
+helloworld new fd
+helloworld old fd
+helloworld new fd
