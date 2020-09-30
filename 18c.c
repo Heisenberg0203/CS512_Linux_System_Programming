@@ -26,14 +26,14 @@ int main(int argc, char * argv[]){
 
 	  printf("Enter Train Number {1,2,3} to book\n");
 	  int train_no;
-	  scanf("%d",&train_no);
+	  scanf("%d%*c",&train_no);
 	  if(train_no<1&&train_no>3){
 		  printf("Invalid details\n");
 		  return -1;
 	  }
 
-	  //reading current values 
-	  lseek(fd,(train_no-1)*sizeof(db),SEEK_SET);
+
+
 	  //lock
 	  struct flock lock;
 	  lock.l_type = F_WRLCK;
@@ -43,9 +43,11 @@ int main(int argc, char * argv[]){
 	  lock.l_pid = getpid();
 	  fcntl(fd,F_SETLKW,&lock);
 	  printf("Ticket booking is now available\n");
+	  //reading current values 
+	  lseek(fd,(train_no-1)*sizeof(db),SEEK_SET);
 	  read(fd,&db,sizeof(db));
-	  printf("Current ticket count %d Press enter to book\n ",db.ticket_count);
-	  getchar(); getchar();;
+	  printf("Current ticket count %d Press enter to book\n",db.ticket_count);
+	  getchar();
 	  //booking ticket and updating db
 	  db.ticket_count++;
 	  lseek(fd,-sizeof(db),SEEK_CUR);
