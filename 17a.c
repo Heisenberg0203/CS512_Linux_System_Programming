@@ -7,7 +7,7 @@ extern int errno;
 
 int main(int argc, char * argv[]){
 
-  int fd = open("db_record",O_RDWR|O_CREAT|O_TRUNC,0644);
+  int fd = open("record",O_RDWR|O_CREAT|O_TRUNC,0644);
 
 
   if (fd==-1)
