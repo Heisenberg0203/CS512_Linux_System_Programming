@@ -4,7 +4,7 @@
 
 int main(){
 
-int fd = open("foo.txt",O_RDWR | O_CREAT | O_EXCL , S_IRWXU| S_IRGRP | S_IROTH);
+int fd = open("4b.txt",O_RDWR | O_CREAT | O_EXCL , S_IRWXU| S_IRGRP | S_IROTH);
 
 if (fd==-1)
 {

@@ -4,7 +4,7 @@
 extern int errno;
 int main(){
 
-int fd = open("foobar.txt",O_RDWR | O_CREAT);
+int fd = open("4a.txt",O_RDWR | O_CREAT);
 
 if (fd==-1)
 {
