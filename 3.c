@@ -4,7 +4,7 @@
 extern int errno;
 int main(){
 
-int fd = creat("foo_usingcreat.txt",0644);
+int fd = creat("3_file.txt",0644);
 
 if (fd==-1)
 {
