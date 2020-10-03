@@ -24,6 +24,7 @@ else
 	printf("error %d",errno);
 
 }
+close(fd);
 
 return 0;	
 }
